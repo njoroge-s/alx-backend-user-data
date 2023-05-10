@@ -7,8 +7,6 @@ import logging
 from typing import List
 import mysql.connector
 
-
-
 patterns = {
     'extract': lambda x, y: r'(?P<field>{})=[^{}]*'.format('|'.join(x), y),
     'replace': lambda x: r'\g<field>={}'.format(x),
